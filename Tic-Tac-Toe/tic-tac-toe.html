@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="John Thompson" content="">
+    <link rel="icon" href="assets/icon.ico">
+
+    <title>Tic-Tac-Toe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<!-- css used for spacing -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- jquery used for js functions  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Primary js for this Game  -->
+    <script type="text/javascript" src="js/script.js"></script>
+	
+	
+  </head>
+
+  <body role="document">
+
+    <div class="container theme-showcase" role="main">
+
+      <!--Displays player scores-->
+	  <div class="jumbotron">
+        <div class="row">
+        <div class="col-sm-5">
+		<div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title"><center>X's Score<center></h3>
+            </div>
+            <div class="panel-body" id="x">
+			<center>
+              0
+            </center>
+			</div>
+          </div>
+		</div>
+        
+		<div class="col-sm-offset-2 col-sm-5">
+		<div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><center>O's Score<center></h3>
+            </div>
+            <div class="panel-body" id="o">
+			<center>
+              0
+            </center>
+			</div>
+          </div>
+		</div>
+       </div>
+	  </div>
+
+
+		<!--displays who's turn it is and holds alerts for the game results-->
+      <div class="page-header">
+		<div class="row">
+			<div class="col-sm-4">
+			<h1>Tic-Tac-Toe Board</h1> 
+			<span class="text-muted"><h3 id="turn">Player X's Turn</h3></span>
+			</div>
+			
+			<div class="col-sm-offset-5 col-sm-3">
+				<div id="owin" class="alert alert-danger" style="display:none;">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Player O</strong> has won the game.
+				</div>
+				
+				<div id="xwin" class="alert alert-info" style="display:none;">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Player X</strong> has won the game.
+				</div>
+				
+				<div id="draw" class="alert alert-warning" style="display:none;">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Draw:</strong> no winner.
+				</div>
+			</div>
+		</div>
+      </div>
+	  
+	  
+	  <!--board for the game-->	  
+	  <center>
+      <div class="row">
+        <button id="1" type="button" onClick="change(this.id);" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+        <button id="2" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+		<button id="3" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+      </div>
+	  <div class="row">
+        <button id="4" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+        <button id="5" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+		<button id="6" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+      </div>
+	  <div class="row">
+        <button id="7" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+        <button id="8" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+		<button id="9" type="button" onClick="change(this.id)" class="btn btn-lg btn-default" style="width: 140px; height: 140px;"><span class="text-muted"><h1><font size="20">+</font></h1></span></button>
+      </div>
+	  </br>
+	  </br>
+	  
+	  <!--button for resetting the game and the scores-->
+	  <button id="reset" type="button" onClick="reset()" class="btn btn-lg btn-success" style="width: 420px;">Restart</button>
+	  <center>
+	  
+	  
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
